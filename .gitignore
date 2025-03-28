@@ -1,0 +1,140 @@
+# Папки сборки и дистрибутивы
+/build/
+/dist/
+/out/
+/target/
+/bin/
+
+# Зависимости
+/node_modules/
+/bower_components/
+/.pnp/
+.pnp.js
+/vendor/
+/packages/
+/composer.phar
+
+# Кэш и временные файлы
+.cache/
+/.gradle/
+/temp/
+/tmp/
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Локальные конфигурации среды разработки
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Логи
+/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Файлы IDE и редакторов
+/.idea/
+/.vscode/
+/*.sublime-*
+/*.swp
+/*.swo
+.project
+.classpath
+.settings/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+/.fleet/
+.nyc_output/
+.cursor/
+.cursor\rules/
+
+# Тестовое покрытие
+/coverage/
+/.nyc_output/
+
+# Артефакты сборки для разных языков
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.egg-info/
+.installed.cfg
+*.egg
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# C#/.NET
+[Oo]bj/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+.vs/
+*.userprefs
+*.usertasks
+*.user
+*.suo
+*.nupkg
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+# Мобильная разработка
+# iOS
+*.ipa
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+local.properties
+proguard/
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+*.jks
+*.keystore
+
+# Docker
+.dockerignore 
