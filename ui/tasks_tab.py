@@ -433,6 +433,9 @@ class TasksTab(QWidget):
         # Контейнер для списка задач
         self.task_list = QScrollArea()
         self.task_list.setWidgetResizable(True)
+        self.task_list.setAlignment(Qt.AlignmentFlag.AlignTop)
+        self.task_list.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.task_list.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         
         self.task_list_container = QWidget()
         self.task_list_container.setStyleSheet("""
@@ -443,6 +446,7 @@ class TasksTab(QWidget):
         self.task_list_layout = QVBoxLayout(self.task_list_container)
         self.task_list_layout.setContentsMargins(0, 10, 0, 10)
         self.task_list_layout.setSpacing(2)
+        self.task_list_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.task_list.setWidget(self.task_list_container)
         
         task_list_layout.addWidget(self.task_list)
@@ -581,8 +585,12 @@ class TasksTab(QWidget):
             # Добавляем задачу в список
             self.task_list_layout.addWidget(task_widget)
         
-        # Добавляем растягивающееся пространство в конце
-        self.task_list_layout.addStretch()
+        # Вместо растягивающегося пространства добавляем пустой виджет с фиксированной высотой
+        if not tasks:
+            empty_label = QLabel("Нет задач")
+            empty_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            empty_label.setStyleSheet("color: #6c757d; font-size: 16px; padding: 20px;")
+            self.task_list_layout.addWidget(empty_label)
     
     def _edit_task(self, task):
         """Редактирование задачи."""
